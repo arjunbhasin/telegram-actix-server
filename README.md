@@ -1,6 +1,6 @@
-## Teleoxide + Actix Web server
+## Teloxide + Actix Web server
 
-Sample code for setting up a Teleoxide based Telegram bot along with an actix web server.
+Sample code for setting up a [Teloxide](https://github.com/teloxide/teloxide) based Telegram bot along with an [actix web](https://actix.rs/) server.
 
 The application accepts a string sent in via Telegram bot (only first 10 chars) and updates an internal variable 'string_to_display'.
 

@@ -31,7 +31,7 @@ async fn main() -> std::io::Result<()> {
     actix_rt::spawn(async move {
         let bot = Bot::from_env();
 
-        // WARNING! Teloxide will crash if BOT_TOKEN is not set in environment variables
+        // WARNING! Teloxide will crash if TELOXIDE_TOKEN is not set in environment variables
         teloxide::repl(bot, move |bot: Bot, msg: Message| {
             // clone the string_to_display to be used in the async block
             let string_to_display = string_to_display_for_thread.clone();
