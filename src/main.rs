@@ -3,7 +3,7 @@ use actix_web::{get,web, App, HttpResponse, HttpServer, Responder};
 use std::sync::{Arc, Mutex};
 use std::env;
 
-static ALLOWED_CHAT_ID:i64 = 1234567890; // replace with your chat id
+static ALLOWED_CHAT_ID:i64 = 5374856972; // replace with your chat id
 
 #[get("/")]
 async fn home_page() -> impl Responder {
@@ -43,7 +43,7 @@ async fn main() -> std::io::Result<()> {
 
                 if msg.chat.id == ChatId(ALLOWED_CHAT_ID.into()) {
                     // read the incoming message and take the first 10 characters
-                    let text = &msg.text().unwrap_or_default()[..10];
+                    let text: String = msg.text().unwrap_or_default().chars().take(10).collect();
                     {
                         // Lock the mutex and update string_to_display 
                         // within a block to drop the lock immediately after.
