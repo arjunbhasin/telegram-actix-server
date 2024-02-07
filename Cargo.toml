@@ -9,3 +9,4 @@ edition = "2021"
 teloxide = { version = "0.12", features = ["macros"] }
 actix-web = "4.4.1"
 actix-rt="2.9.0"
+openssl = {version = "0.10.63", features = ["vendored"]}
